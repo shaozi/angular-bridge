@@ -7,7 +7,9 @@
     "url": "http://unitech.io"
   },
   "scripts": {
-    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha test"
+    "test": "NODE_ENV=test ./node_modules/mocha/bin/mocha test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "contributors": [
     {
@@ -31,7 +33,8 @@
     "body-parser": "^1.13.1",
     "express": "^4.13.0",
     "mongoose": "*",
-    "underscore": "1.x"
+    "underscore": "1.x",
+    "snyk": "^1.189.0"
   },
   "keywords": [
     "angular js",
@@ -61,5 +64,6 @@
   "license": "MIT",
   "engines": {
     "node": "*"
-  }
+  },
+  "snyk": true
 }
